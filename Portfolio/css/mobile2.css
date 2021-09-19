@@ -1,0 +1,680 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+ }
+h2{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.dotted-hr{
+    border: dotted 6px white;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+
+}
+ [class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+/* for mobile */
+ [class*="col-"]{
+    width: 100%;
+}
+
+/* navbar design Starts here */
+
+.navbar{
+    background-color: #0c6168 ;
+    padding: 1% 7%;
+    text-align: center;
+}
+
+.navbar h1{
+    color: white;
+    margin: 0;
+    padding-top: 10px ;
+}
+
+.navbar-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.navbar-menu a{
+    background-color: #40868b;
+    border-radius: 10px;
+    margin: 7px 0;
+    padding: 10px;
+
+}
+
+.navbar-menu a:hover{
+    background-color: gray;
+    color: white;
+}
+
+.navbar::after{
+    clear: both;
+    display: table;
+    content: '';
+} 
+
+/* navbar design ends here */
+
+/* profile design Starts from here */
+
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+
+.profile .top-wether-icon {
+    position: absolute; 
+    right: 60px;
+    top: -25px;
+    transition: transform 2s;
+}
+
+.profile .top-wether-icon:hover {
+    transform: rotate(360deg);
+}
+
+.profile-desc h1{
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+
+}
+
+.profile-desc p{
+    color: gray;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 90%;
+}
+
+
+
+
+.profile .bottom-wether-icon {
+    position: absolute; 
+    left:  60px;
+    bottom: -50px;
+    transition: transform 2s;
+}
+
+.profile .bottom-wether-icon:hover {
+    transform: rotate(360deg);
+}
+/* profile design ends here */
+
+/* about me design starts here */
+
+.about-me{
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.aboutme-img img{
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 220px;
+    width: 210px;
+}
+
+.about-me p{
+    text-align: center;
+}
+
+.about-me a{
+    font-size: 1.2rem;
+}
+
+.cv-bittom{
+    background-color: #052d2f;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+
+.cv-bittom:hover{
+    background-color: white;
+    color: #052d2f;
+    
+}
+
+
+
+.about-me::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+
+
+/* about me design ends here */
+
+/* Professional experience starts here */
+
+.professional-experience{
+    padding: 1% 0%;
+    color: black;
+}
+
+.professional-experience .card{
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    transition: .3;
+    height: 700px;
+
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+
+.card-icon{
+    text-align: center;
+}
+
+.card-icon img{
+    width: 100px;
+}
+
+.rounded-img{
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.card-title h2{
+    background-color: #616161;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.skill-container{
+    padding: 45px;
+
+}
+
+.skill-container li{
+    list-style-type: none;
+    margin: 30px 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+
+
+    background-color: rgb(180, 176, 180);
+    width: 100%;
+    height: 25px;
+    border-radius: 1000px;
+}
+
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+
+
+    background-color: rgb(40, 139, 179);
+    width: 0;
+    height: 25px;
+    border-radius: 1000px;
+
+
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+
+.skill-container li.html::after{
+    animation-name: html;
+}
+
+@keyframes html {
+    to{
+        width: 90%;
+        
+    }
+    
+}
+
+.skill-container li.css::after{
+    animation-name: css;
+}
+
+@keyframes css {
+    to{
+        width: 97%;
+        
+    }
+    
+}
+
+.skill-container li.js::after{
+    animation-name: js;
+}
+
+@keyframes js {
+    to{
+        width: 83%;
+        
+    }
+    
+}
+
+.skill-container li.bootstrap::after{
+    animation-name: bootstrap;
+}
+
+@keyframes bootstrap {
+    to{
+        width: 80%;
+        
+    }
+    
+}
+
+.skill-container li.java::after{
+    animation-name: java;
+}
+
+@keyframes java {
+    to{
+        width: 70%;
+        
+    }
+    
+}
+
+.skill-container li.cplus::after{
+    animation-name: cplus;
+}
+
+@keyframes cplus {
+    to{
+        width: 90%;
+        
+    }
+    
+}
+
+.skill-container li.cplus::after{
+    animation-name: cplus;
+}
+
+@keyframes cplus {
+    to{
+        width: 95%;
+        
+    }
+    
+}
+
+.skill-container li.jQuery::after{
+    animation-name: jQuery;
+}
+
+@keyframes jQuery {
+    to{
+        width: 90%;
+        
+    }
+    
+}
+
+.skill-container li.Github::after{
+    animation-name: Github;
+}
+
+@keyframes Github {
+    to{
+        width: 97%;
+        
+    } 
+}
+
+.professional-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Professional experience ends here */
+
+
+/* achievement-contact starts from here */
+
+.achievement-contact{
+    padding: 1% 7%;
+    background-color: #39a4ac;
+    color: white;
+}
+
+.Contact input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+
+}
+
+.Contact{
+    text-align: center;
+}
+
+.Contact button{
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+
+.Contact-links{
+    text-align: center;
+}
+
+.media-buttons .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: #68abb1;
+}
+
+/* btn1 */
+.fa-facebook{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background-color: #3b5998;
+    padding: 13.1px;
+    font-size: 1.8rem;
+}
+
+.fa-facebook:hover{
+    background-color: rgb(255, 255, 255);
+    color:#3b5998 !important;
+ }
+
+/* btn2 */
+.fa-instagram{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    padding: 13.1px;
+    font-size: 1.8rem;
+}
+
+.fa-instagram:hover{
+    background-color: rgb(255, 255, 255);
+    color:#f51010 !important;
+ }
+
+
+/* .media-buttons .btn2{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: rgb(9, 102, 194);
+}
+
+.btn2:hover{
+    background-color: rgb(197, 197, 197);
+} */
+
+/* btn3 */
+.fa-linkedin{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background-color: #2377b5;
+    padding: 12px;
+    font-size: 1.8rem;
+}
+
+
+
+.fa-linkedin:hover{
+    background-color: rgb(255, 255, 255);
+    color:#2377b5 !important;
+ }
+
+
+ 
+
+/* .media-buttons .btn3{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    color: white !important;
+    width: 50px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.btn3:hover{
+    background-color: rgb(197, 197, 197);
+} */
+
+/* btn4 */
+.fa-twitter{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background-color: #319deb;
+    padding: 13.1px;
+    font-size: 1.8rem;
+}
+
+.fa-twitter:hover{
+    background-color: rgb(255, 255, 255);
+    color:#319deb !important;
+ }
+
+/* .media-buttons .btn4{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: rgb(58, 172, 249);
+}
+
+.btn4:hover{
+    background-color: rgb(197, 197, 197);
+} */
+
+/* btn5 */
+.fa-github{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background-color: #000000;
+    padding: 13.1px;
+    font-size: 1.8rem;
+}
+
+.fa-github:hover{
+    background-color: rgb(255, 255, 255);
+    color:#000000 !important;
+ }
+
+/* .media-buttons .btn5{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color:black;
+}
+
+.btn5:hover{
+    background-color: rgb(197, 197, 197);
+} */
+
+
+.fa-wordpress{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    color: #2d779d;
+    background-color: white;
+    padding: 10px;
+    font-size: 1.8rem;
+
+}
+
+.fa-wordpress:hover{
+    background-color: #319deb;
+    color: white !important;
+ }
+
+
+
+
+/* .media-buttons .btn7{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: white;
+}
+
+.btn6:hover{
+    background-color: rgb(197, 197, 197);
+} */
+
+.btn7{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background-color: #ffffff;
+    padding: 7px;
+    font-size: 1.8rem;
+
+}
+
+.btn7:hover{
+    background-color: #319deb;
+    color: white !important;
+ }
+
+
+
+.achievement-contact::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* achievement-contact ends from here */
+
+/* <!-- Footer start from here --> */
+
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-menu a{
+    display: block;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.footer-menu a:hover{
+    color: gray;
+}
+
+.footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* <!-- Footer ends from here --> */
